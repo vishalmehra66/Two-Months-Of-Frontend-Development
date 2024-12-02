@@ -1,0 +1,143 @@
+
+◼HTML Basics
+  HTML (Hypertext Markup Language) is the foundational language for creating web pages. It structures content on the webpage and helps browsers understand 
+how to display different types of content like text, images, and links.
+
+1. Structure of an HTML Document:-
+  An HTML document follows a specific structure, which provides a foundation for content and styling. 
+Here’s an outline of a basic HTML document:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <!-- Content goes here -->
+</body>
+</html>
+
+Explanation of Each Part:
+
+<!DOCTYPE html> : Declares the document type and version of HTML (HTML5 in this case).
+
+<html lang="en"> : Root element of the document with a lang attribute defining the language.
+
+<head>: Contains metadata about the page, such as its title and character set.
+
+<meta charset="UTF-8"> : Sets the character encoding to UTF-8, which supports all characters.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Sets the viewport for responsive design.
+
+<title> : Specifies the title displayed on the browser tab.
+
+<body> : Contains the main content of the page, which is visible to users.
+
+2. HTML Tags:-
+  HTML tags are elements enclosed within angle brackets (< >) and are used to structure and define different parts of the content. 
+Tags typically come in pairs: an opening tag <tagname> and a closing tag </tagname>. Some tags are self-closing.
+
+Examples of Common Tags:-
+
+Headings: <h1>, <h2>, <h3>, <h4>, <h5>, <h6> (Levels of headings from most to least important)
+Paragraphs: <p> (Defines a paragraph)
+Images: <img src="image.jpg" alt="description"> (Displays an image with an alternative text)
+Links: <a href="url">link text</a> (Defines a hyperlink to another page)
+Lists:
+     Unordered List : <ul> <li>Item</li> </ul>
+     Ordered List : <ol> <li>Item</li> </ol>
+
+Tables: <table>, <tr>, <th>, <td> (For creating tabular data)
+
+Self-Closing Tags:-
+  Some HTML tags are self-closing, meaning they don’t have an ending tag:
+
+<img>: Image tag
+<br>: Line break
+<hr>: Horizontal line
+
+3. Semantics in HTML:-
+  Semantic HTML means using tags that convey the meaning of the content. This helps both browsers and developers understand the purpose of each element. 
+Semantics make the content more accessible and improves SEO.
+
+Examples of Semantic Tags:
+
+<header>: Defines the header section, often containing navigation links or introductory information.
+
+<nav>: Represents a section with navigational links.
+
+<main>: Defines the main content area, unique to the page’s central topic.
+
+<section>: Used to group related content within the main area.
+
+<article>: Self-contained piece of content that could be distributed independently (like a blog post).
+
+<footer>: Contains footer content, such as copyright info or links.
+
+Non-semantic tags, like <div> and <span>, don’t convey meaning and are used only for layout.
+
+4. Syntax:-
+HTML syntax refers to the way tags are written to ensure browsers interpret them correctly. Here are some key rules:
+
+Tag Names: Always use lowercase for tag names (e.g., <html>, <body>).
+
+Attributes: Additional information added to a tag to customize it. They are always included within the opening tag and written as attribute="value". Common attributes include:
+href for links
+src for images and scripts
+alt for alternative text for images
+
+Nesting: Properly nested tags ensure the document structure is maintained. For example:
+
+<p>This is a <strong>nested</strong> text.</p>
+Here, <strong> is nested inside <p>.
+
+Comments: Use comments to annotate the code. Comments are ignored by the browser and look like this:
+
+<!-- This is a comment -->
+
+5. Example of a Simple HTML Document:-
+Here’s an example that brings all these concepts together:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Page</h1>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm learning frontend development.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here's a list of my projects:</p>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Name</p>
+    </footer>
+</body>
+</html>
+
+This example demonstrates a semantic HTML structure with a header, navigation, main content, sections, and a footer.
+

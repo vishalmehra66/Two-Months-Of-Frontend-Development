@@ -1,0 +1,39 @@
+
+
+    *{
+        background-color: rgb(79, 108, 212);
+        /* margin-left: 100px; */
+    }
+
+    div{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-top: 20px;
+        background-color: rgb(201, 224, 224);
+    }
+
+    section{
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    #header{
+        margin-top: 50px;
+        padding: 20px;
+        text-align: center;
+    }
+      
+
+    table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 60%;
+    
+    }
+    
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    

@@ -1,0 +1,108 @@
+
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    padding: var(--padding);
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: var(--padding);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: var(--padding);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Pseudo-elements */
+.card::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Flexbox example */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    background: #f1f1f1;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Animation example */
+@keyframes colorChange {
+    0% { background-color: #3498db; }
+    50% { background-color: #9b59b6; }
+    100% { background-color: #2ecc71; }
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color);
+    margin: 20px auto;
+    animation: colorChange 5s infinite;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    header {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .card {
+        padding: 10px;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+}

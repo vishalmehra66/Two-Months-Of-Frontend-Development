@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Example</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            height: 300px;
+            position: relative; /* container for positioning absolute elements */
+        }
+
+        .static-box {
+            position: static; /* Default positioning */
+            background: #f1c40f;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background: #2ecc71;
+            padding: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            background: #3498db;
+            padding: 10px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #e74c3c;
+            padding: 10px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background: #9b59b6;
+            padding: 10px;
+        }
+        .sf{
+            height: 1000px; 
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="static-box">Static Box (default)</div>
+        <div class="relative-box">Relative Box</div>
+        <div class="absolute-box">Absolute Box (inside container)</div>
+        <div class="sticky-box">Sticky Box (scroll to see behavior)</div>
+    </div>
+    <div class="fixed-box">Fixed Box</div>
+
+    <!-- Scrollable content to demonstrate sticky and fixed behavior -->
+    <div  class="sf">
+        Scroll this content to see the behavior of the sticky and fixed boxes.
+    </div>
+</body>
+</html>

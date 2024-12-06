@@ -1,0 +1,79 @@
+
+<!--  In this programm i try to make a responsive navigation bar  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background-color: rgb(192, 171, 223);
+            font-size: larger;
+            padding: 5px 20px 1px;
+            
+        }
+        .navbar .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .nav-links{
+            list-style: none;
+            display: flex;        
+            gap: 25px;
+
+        }
+        .navbar .nav-links a{
+            color:white ;
+            text-decoration: underline  transparent;
+            transition: color 0.3s;
+        }
+        .navbar .nav-links a:hover{
+            color: rgb(43, 111, 227);
+            text-decoration: underline  rgb(43, 111, 227);   
+        }
+        .container h1{
+            font-family: sans-serif;
+            color: rgb(97, 5, 183);
+        }
+        
+        @media (max-width: 700px) {
+            
+        .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+        }
+
+        .navbar .nav-links {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    }
+        
+    </style>
+
+</head>
+<body>
+     <nav class="navbar">
+        <div class="container">
+            <h1>E-commerce</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+     </nav>
+    
+</body>
+</html>

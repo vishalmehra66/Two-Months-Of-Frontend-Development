@@ -1,0 +1,115 @@
+
+
+ <!-- This code demonstrates how to create a collection of buttons with various animations using HTML and CSS. -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Button Set</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3f3f3;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            position: relative;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-1:hover {
+            background: #0056b3;
+        }
+
+        .btn-2 {
+            background: #28a745;
+        }
+
+        .btn-2:hover {
+            background: #218838;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-3 {
+            background: #ff5722;
+            overflow: hidden;
+        }
+
+        .btn-3::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .btn-3:hover::after {
+            transform: translate(-50%, -50%) scale(15);
+            opacity: 0;
+        }
+
+        .btn-4 {
+            background: #e91e63;
+            color: white;
+        }
+
+        .btn-4::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s;
+        }
+
+        .btn-4:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="btn btn-1" type="button">Button 1</button> 
+        <!-- Button 1: A simple button with a hover effect that scales slightly. -->
+        <button class="btn btn-2" type="button">Button 2</button>
+        <!-- Button 2: A green button that changes color, scale and adds a shadow on hover. -->
+        <button class="btn btn-3" type="button">Ripple Button</button>
+        <!-- Button 3: Implements a "ripple" effect when hovered. -->
+        <button class="btn btn-4" type="button">Slide Hover</button>
+        <!-- Button 4: Has a slide hover effect where a translucent overlay moves across the button. -->
+    </div>
+</body>
+</html>
